@@ -2,6 +2,9 @@
 @import "./helpers/variables";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
+
+@import "./helpers/utilities";
+
 // ------helpers--------
 @import "base/base";
 @import "helpers/mixin";
