@@ -17,14 +17,16 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
-
-// custom
-$gary-custom: #00000062;
 // scss-docs-end gray-color-variables
+
+// r-custom-color start
+$gary-custom: #00000062;
+// r-custom-color end
 
 // fusv-disable
 // scss-docs-start gray-colors-map
-$grays: ("100": $gray-100,
+$grays: (
+  "100": $gray-100,
   "200": $gray-200,
   "300": $gray-300,
   "400": $gray-400,
@@ -50,7 +52,8 @@ $cyan: #0dcaf0 !default;
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
-$colors: ("blue": $blue,
+$colors: (
+  "blue": $blue,
   "indigo": $indigo,
   "purple": $purple,
   "pink": $pink,
@@ -62,7 +65,8 @@ $colors: ("blue": $blue,
   "cyan": $cyan,
   "white": $white,
   "gray": $gray-600,
-  "gray-dark": $gray-800) !default;
+  "gray-dark": $gray-800
+) !default;
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
@@ -77,14 +81,16 @@ $dark: $gray-900 !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
-$theme-colors: ("primary": $primary,
+$theme-colors: (
+  "primary": $primary,
   "secondary": $secondary,
   "success": $success,
   "info": $info,
   "warning": $warning,
   "danger": $danger,
   "light": $light,
-  "dark": $dark) !default;
+  "dark": $dark
+) !default;
 // scss-docs-end theme-colors-map
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
@@ -252,6 +258,32 @@ $spacers: (0: 0,
   5: $spacer * 3,
 ) !default;
 
+$r-spacer: 4px;
+$r-spacers: (
+  0: 0,
+  1: $spacer,         // 4
+  2: $spacer * 2,     // 8
+  3: $spacer * 3,     // 12
+  4: $spacer * 4,     // 16
+  5: $spacer * 5,     // 20
+  6: $spacer * 6,     // 24
+  7: $spacer * 7,     // 28
+  8: $spacer * 8,     // 32
+  9: $spacer * 9,     // 36
+  10: $spacer * 10,   // 40
+  11: $spacer * 11,   // 44
+  12: $spacer * 12,   // 48
+  13: $spacer * 13,   // 52
+  14: $spacer * 14,   // 56
+  15: $spacer * 15,   // 60
+  18: $spacer * 18,   // 72
+  20: $spacer * 20,   // 80 
+  24: $spacer * 24,   // 96
+  26: $spacer * 26,   // 104
+  40: $spacer * 40,   // 160
+  small: $spacer * 3.75,
+);
+
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -410,6 +442,7 @@ $font-family-code: var(--#{$variable-prefix}font-monospace) !default;
 // $font-size-base affects the font size of the body text
 $font-size-root: null !default;
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-small: 14px !default;
 $font-size-sm: $font-size-base * .875 !default;
 $font-size-lg: $font-size-base * 1.25 !default;
 
@@ -434,13 +467,20 @@ $h6-font-size: $font-size-base !default;         // 16
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
-$font-sizes: (1: $h1-font-size,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size) !default;
+$font-sizes: (
+  xxl: 4.5rem,      // 72
+  xl: 4rem,         // 64
+  lg: 3rem,         // 48
+  1: $h1-font-size, // 40
+  2: $h2-font-size, // 32
+  3: $h3-font-size, // 28
+  4: $h4-font-size, // 24
+  5: $h5-font-size, // 20
+  6: $h6-font-size, // 16
+  s: 0.875rem       // 14
+) !default;
 // scss-docs-end font-sizes
+
 
 // scss-docs-start headings-variables
 $headings-margin-bottom: $spacer * .5 !default;
@@ -452,12 +492,14 @@ $headings-color: null !default;
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings
-$display-font-sizes: (1: 5rem,
-  2: 4.5rem,
-  3: 4rem,
-  4: 3.5rem,
-  5: 3rem,
-  6: 2.5rem) !default;
+$display-font-sizes: (
+  1: 5rem,     // 80
+  2: 4.5rem,   // 72
+  3: 4rem,     // 64
+  4: 3.5rem,   // 56
+  5: 3rem,     // 48
+  6: 2.5rem    // 40
+) !default;
 
 $display-font-weight: 300 !default;
 $display-line-height: $headings-line-height !default;
