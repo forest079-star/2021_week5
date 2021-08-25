@@ -1,0 +1,40 @@
+h1 .logo {
+  background-image: url("../images/logo-ANSWER.svg");
+  background-repeat: no-repeat;
+  width: 151px;
+  height: 40px;
+  display: block;
+  @include text-hide();
+}
+
+.menubar {
+  position: fixed;
+  min-width: 200px;
+  min-height: 100vh;
+}
+
+.nav {
+  &-link {
+    position: relative;
+    color: $gray-900;
+  }
+
+  &-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 32px;
+    border-left: 4px solid transparent;
+    transition: border-left .4s;
+  }
+
+  &-link:hover,
+  &-link.active {
+    color: $success;
+
+    &::before {
+      border-left: 4px solid $success;
+    }
+  }
+}

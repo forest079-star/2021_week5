@@ -16,7 +16,7 @@
 
 // r-這個檔案「更改」既有變數
 @import "./helpers/variables";
-@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/mixins"; 
 
 // r-這個檔案「更改」既有變數
 @import "./helpers/utilities";
@@ -69,6 +69,7 @@
 
 // ------utilities-----
 @import "utilities/tools";
+@import "utilities/utilities";
 
 // ------layout--------
 @import "layout/sidebar";

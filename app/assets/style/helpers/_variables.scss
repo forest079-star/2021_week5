@@ -250,39 +250,39 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 
 // scss-docs-start spacer-variables-maps
 $spacer: 1rem !default;
-$spacers: (0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-) !default;
+// $r-spacers: (
+//   0: 0,
+//   1: $spacer * .25,
+//   2: $spacer * .5,
+//   3: $spacer,
+//   4: $spacer * 1.5,
+//   5: $spacer * 3
+// ) !default;
 
-$r-spacer: 4px;
-$r-spacers: (
+$spacers: (
   0: 0,
-  1: $spacer,         // 4
-  2: $spacer * 2,     // 8
-  3: $spacer * 3,     // 12
-  4: $spacer * 4,     // 16
-  5: $spacer * 5,     // 20
-  6: $spacer * 6,     // 24
-  7: $spacer * 7,     // 28
-  8: $spacer * 8,     // 32
-  9: $spacer * 9,     // 36
-  10: $spacer * 10,   // 40
-  11: $spacer * 11,   // 44
-  12: $spacer * 12,   // 48
-  13: $spacer * 13,   // 52
-  14: $spacer * 14,   // 56
-  15: $spacer * 15,   // 60
-  18: $spacer * 18,   // 72
-  20: $spacer * 20,   // 80 
-  24: $spacer * 24,   // 96
-  26: $spacer * 26,   // 104
-  40: $spacer * 40,   // 160
-  small: $spacer * 3.75,
-);
+  1: $spacer * 0.25,    // 4
+  2: $spacer * 0.5,     // 8
+  3: $spacer * 0.75,    // 12
+  4: $spacer * 1,       // 16
+  5: $spacer * 1.25,    // 20
+  6: $spacer * 1.5,     // 24
+  7: $spacer * 1.75,    // 28
+  8: $spacer * 2,       // 32
+  9: $spacer * 2.25,    // 36
+  10: $spacer * 2.5,    // 40
+  11: $spacer * 2.75,   // 44
+  12: $spacer * 3,      // 48
+  13: $spacer * 3.25,   // 52
+  14: $spacer * 3.5,    // 56
+  15: $spacer * 3.75,   // 60
+  18: $spacer * 4.5,    // 72
+  20: $spacer * 5,      // 80 
+  24: $spacer * 6,      // 96
+  26: $spacer * 6.5,    // 104
+  40: $spacer * 10,     // 160
+  15px: $spacer * 3.75
+) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
 // scss-docs-end spacer-variables-maps
@@ -468,18 +468,19 @@ $h6-font-size: $font-size-base !default;         // 16
 
 // scss-docs-start font-sizes
 $font-sizes: (
-  xxl: 4.5rem,      // 72
-  xl: 4rem,         // 64
+  s: 0.75rem,       // 12
+  xs: 0.875rem,     // 14
+  1: $h6-font-size, // 16
+  2: $h5-font-size, // 20
+  3: $h4-font-size, // 24
+  4: $h3-font-size, // 28
+  5: $h2-font-size, // 32
+  6: $h1-font-size, // 40
   lg: 3rem,         // 48
-  1: $h1-font-size, // 40
-  2: $h2-font-size, // 32
-  3: $h3-font-size, // 28
-  4: $h4-font-size, // 24
-  5: $h5-font-size, // 20
-  6: $h6-font-size, // 16
-  s: 0.875rem       // 14
-) !default;
-// scss-docs-end font-sizes
+  xl: 4rem,         // 64
+  xxl: 4.5rem       // 72
+  ) !default;
+  // scss-docs-end font-sizes
 
 
 // scss-docs-start headings-variables
