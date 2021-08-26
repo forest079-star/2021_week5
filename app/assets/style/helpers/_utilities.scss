@@ -125,7 +125,11 @@ $utilities: map-merge(
     "border-color": (
       property: border-color,
       class: border,
-      values: map-merge($theme-colors, ("white": $white))
+      values: map-merge($theme-colors, (
+        "white": $white,
+        "gray-400": $gray-400
+        
+      ))
     ),
     "border-width": (
       property: border-width,
@@ -510,6 +514,7 @@ $utilities: map-merge(
           "black-50": rgba($black, .5),
           "white-50": rgba($white, .5),
           "reset": inherit,
+          "gray-900": #212529,
         )
       )
     ),
@@ -523,7 +528,8 @@ $utilities: map-merge(
         (
           "body": $body-bg,
           "white": $white,
-          "transparent": transparent
+          "transparent": transparent,
+          "gray-100":$gray-100
         )
       )
     ),

@@ -89,7 +89,8 @@ $theme-colors: (
   "warning": $warning,
   "danger": $danger,
   "light": $light,
-  "dark": $dark
+  "dark": $dark,
+  "$gray-100": $gray-100
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -281,7 +282,7 @@ $spacers: (
   24: $spacer * 6,      // 96
   26: $spacer * 6.5,    // 104
   40: $spacer * 10,     // 160
-  15px: $spacer * 3.75
+  15px: $spacer * 3.75  // 15
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -1338,7 +1339,7 @@ $progress-bar-transition: width .6s ease !default;
 // scss-docs-start list-group-variables
 $list-group-color: $gray-900 !default;
 $list-group-bg: $white !default;
-$list-group-border-color: rgba($black, .125) !default;
+$list-group-border-color: $gray-400;//rgba($black, .125) !default;
 $list-group-border-width: $border-width !default;
 $list-group-border-radius: $border-radius !default;
 
@@ -1349,7 +1350,7 @@ $list-group-item-color-scale: 40% !default;
 
 $list-group-hover-bg: $gray-100 !default;
 $list-group-active-color: $component-active-color !default;
-$list-group-active-bg: $component-active-bg !default;
+$list-group-active-bg: $component-active-bg !default; 
 $list-group-active-border-color: $list-group-active-bg !default;
 
 $list-group-disabled-color: $gray-600 !default;
